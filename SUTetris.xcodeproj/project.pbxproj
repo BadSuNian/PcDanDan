@@ -15,6 +15,13 @@
 		621069271F7A8B1100B0302E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 621069211F7A8B1100B0302E /* AFURLSessionManager.m */; };
 		6210692A1F7A8B7000B0302E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 621069291F7A8B7000B0302E /* WebViewController.m */; };
 		6218106F1F7BDAA70095EDB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6218106E1F7BDAA70095EDB9 /* Images.xcassets */; };
+		621811031F7CA8690095EDB9 /* DHGifImageOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 621810FF1F7CA8690095EDB9 /* DHGifImageOperation.m */; };
+		621811041F7CA8690095EDB9 /* DHGuidePageHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 621811011F7CA8690095EDB9 /* DHGuidePageHUD.m */; };
+		621811051F7CA8690095EDB9 /* GuideImage.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 621811021F7CA8690095EDB9 /* GuideImage.bundle */; };
+		621811061F7CA91F0095EDB9 /* 介绍.png in Resources */ = {isa = PBXBuildFile; fileRef = 621810AB1F7C8D950095EDB9 /* 介绍.png */; };
+		621811071F7CA9210095EDB9 /* 介绍页1.png in Resources */ = {isa = PBXBuildFile; fileRef = 621810AA1F7C8D950095EDB9 /* 介绍页1.png */; };
+		621811081F7CA9240095EDB9 /* 介绍页2.png in Resources */ = {isa = PBXBuildFile; fileRef = 621810A91F7C8D950095EDB9 /* 介绍页2.png */; };
+		6218110A1F7CB68B0095EDB9 /* 启动图.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 621811091F7CB67F0095EDB9 /* 启动图.jpg */; };
 		62C173541F7A45B5008EDD21 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C173531F7A45B5008EDD21 /* CFNetwork.framework */; };
 		62C173561F7A45BB008EDD21 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C173551F7A45BB008EDD21 /* CoreFoundation.framework */; };
 		62C173581F7A45C2008EDD21 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C173571F7A45C2008EDD21 /* CoreTelephony.framework */; };
@@ -53,6 +60,15 @@
 		621069281F7A8B7000B0302E /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		621069291F7A8B7000B0302E /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		6218106E1F7BDAA70095EDB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		621810A91F7C8D950095EDB9 /* 介绍页2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "介绍页2.png"; sourceTree = "<group>"; };
+		621810AA1F7C8D950095EDB9 /* 介绍页1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "介绍页1.png"; sourceTree = "<group>"; };
+		621810AB1F7C8D950095EDB9 /* 介绍.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "介绍.png"; sourceTree = "<group>"; };
+		621810FE1F7CA8690095EDB9 /* DHGifImageOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGifImageOperation.h; sourceTree = "<group>"; };
+		621810FF1F7CA8690095EDB9 /* DHGifImageOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGifImageOperation.m; sourceTree = "<group>"; };
+		621811001F7CA8690095EDB9 /* DHGuidePageHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHGuidePageHUD.h; sourceTree = "<group>"; };
+		621811011F7CA8690095EDB9 /* DHGuidePageHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHGuidePageHUD.m; sourceTree = "<group>"; };
+		621811021F7CA8690095EDB9 /* GuideImage.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GuideImage.bundle; sourceTree = "<group>"; };
+		621811091F7CB67F0095EDB9 /* 启动图.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "启动图.jpg"; sourceTree = "<group>"; };
 		62C173531F7A45B5008EDD21 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		62C173551F7A45BB008EDD21 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		62C173571F7A45C2008EDD21 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -126,6 +142,18 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		621810FD1F7CA8690095EDB9 /* DHGuidePageHUD */ = {
+			isa = PBXGroup;
+			children = (
+				621810FE1F7CA8690095EDB9 /* DHGifImageOperation.h */,
+				621810FF1F7CA8690095EDB9 /* DHGifImageOperation.m */,
+				621811001F7CA8690095EDB9 /* DHGuidePageHUD.h */,
+				621811011F7CA8690095EDB9 /* DHGuidePageHUD.m */,
+				621811021F7CA8690095EDB9 /* GuideImage.bundle */,
+			);
+			path = DHGuidePageHUD;
+			sourceTree = "<group>";
+		};
 		62C1734E1F7A4592008EDD21 /* JPUSH */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +204,7 @@
 		904BD0621E8E1470008AB699 /* SUTetris */ = {
 			isa = PBXGroup;
 			children = (
+				621810FD1F7CA8690095EDB9 /* DHGuidePageHUD */,
 				62C1734E1F7A4592008EDD21 /* JPUSH */,
 				62C1736B1F7A4624008EDD21 /* SUTetris.entitlements */,
 				904BD07A1E8E14C9008AB699 /* TetrisViewController.h */,
@@ -190,6 +219,10 @@
 		904BD0631E8E1470008AB699 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				621811091F7CB67F0095EDB9 /* 启动图.jpg */,
+				621810AB1F7C8D950095EDB9 /* 介绍.png */,
+				621810AA1F7C8D950095EDB9 /* 介绍页1.png */,
+				621810A91F7C8D950095EDB9 /* 介绍页2.png */,
 				904BD0661E8E1470008AB699 /* AppDelegate.h */,
 				904BD0671E8E1470008AB699 /* AppDelegate.m */,
 				904BD07F1E8E15CB008AB699 /* UIHelper.h */,
@@ -266,7 +299,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621811051F7CA8690095EDB9 /* GuideImage.bundle in Resources */,
+				621811061F7CA91F0095EDB9 /* 介绍.png in Resources */,
+				6218110A1F7CB68B0095EDB9 /* 启动图.jpg in Resources */,
+				621811081F7CA9240095EDB9 /* 介绍页2.png in Resources */,
 				904BD07E1E8E152D008AB699 /* TetrisViewController.xib in Resources */,
+				621811071F7CA9210095EDB9 /* 介绍页1.png in Resources */,
 				6218106F1F7BDAA70095EDB9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,6 +318,7 @@
 			files = (
 				621069241F7A8B1100B0302E /* AFSecurityPolicy.m in Sources */,
 				621069261F7A8B1100B0302E /* AFURLResponseSerialization.m in Sources */,
+				621811031F7CA8690095EDB9 /* DHGifImageOperation.m in Sources */,
 				6210692A1F7A8B7000B0302E /* WebViewController.m in Sources */,
 				904BD0681E8E1470008AB699 /* AppDelegate.m in Sources */,
 				904BD0651E8E1470008AB699 /* main.m in Sources */,
@@ -288,6 +327,7 @@
 				904BD07C1E8E14C9008AB699 /* TetrisViewController.m in Sources */,
 				621069231F7A8B1100B0302E /* AFNetworkReachabilityManager.m in Sources */,
 				904BD0811E8E15CB008AB699 /* UIHelper.m in Sources */,
+				621811041F7CA8690095EDB9 /* DHGuidePageHUD.m in Sources */,
 				621069251F7A8B1100B0302E /* AFURLRequestSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,9 +433,10 @@
 				CODE_SIGN_ENTITLEMENTS = SUTetris/SUTetris.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = YES;
 				DEVELOPMENT_TEAM = H5955E42Z3;
 				INFOPLIST_FILE = SUTetris/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -417,9 +458,10 @@
 				CODE_SIGN_ENTITLEMENTS = SUTetris/SUTetris.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				COPY_HEADERS_RUN_UNIFDEF = YES;
 				DEVELOPMENT_TEAM = H5955E42Z3;
 				INFOPLIST_FILE = SUTetris/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",

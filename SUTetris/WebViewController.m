@@ -16,8 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    self.web = [[UIWebView alloc] initWithFrame:CGRectMake(0, [[UIApplication sharedApplication] statusBarFrame].size.height, self.view.bounds.size.width, self.view.bounds.size.height)];
+    self.view.backgroundColor = [UIColor whiteColor];
+//    // Do any additional setup after loading the view.
+    self.web = [[UIWebView alloc] initWithFrame:CGRectMake(0, -[[UIApplication sharedApplication] statusBarFrame].size.height, self.view.bounds.size.width, self.view.bounds.size.height+[[UIApplication sharedApplication] statusBarFrame].size.height)  ];
     [self.web loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.url]]];
     [self.view addSubview:self.web];
 }

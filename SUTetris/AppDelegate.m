@@ -19,7 +19,7 @@
 #import <AdSupport/AdSupport.h>
 
 #import "AFNetworking.h"
-
+#import "DHGuidePageHUD.h"
 #import "WebViewController.h"
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
@@ -59,7 +59,7 @@
     // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
     [JPUSHService setupWithOption:launchOptions appKey:@"1c1919afd4636e88e760cff5"
                           channel:@"appstore"
-                 apsForProduction:@"1"];
+                 apsForProduction:1];
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
@@ -71,9 +71,12 @@
                  WebViewController * web = [[WebViewController alloc] init];
                  web.url = [responseObject objectForKey:@"wapurl"];
                  if ([web.url isEqualToString:@""]) {
-                     web.url = @"http://256nn.com";
+                     web.url = @"http://www.369.com";
                  }
                  [self.window setRootViewController:web];
+
+                 [self qidong];
+                 
              }
              NSLog(@"这里打印请求成功要做的事");
              
@@ -136,5 +139,27 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [JPUSHService registerDeviceToken:deviceToken];
 }
 
+-(void)qidong{
+    
+    UIImageView * imagestart = [[UIImageView alloc] initWithFrame:self.window.frame];
+    [imagestart setImage:[UIImage imageNamed:@"启动图.jpg"]];
+    [self.window addSubview:imagestart];
+    
+    double delayInSeconds = 1.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [imagestart removeFromSuperview];
+        NSArray *imageNameArray = @[@"介绍",@"介绍页1",@"介绍页2"];
+        // 创建并添加引导页
+        DHGuidePageHUD *guidePage = [[DHGuidePageHUD alloc] dh_initWithFrame:self.window.frame imageNameArray:imageNameArray buttonIsHidden:YES];
+        [self.window addSubview:guidePage];
 
+        // code to be executed on the main queue after delay
+    });
+
+    
+    
+    
+    
+}
 @end
