@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		621069221F7A8B1100B0302E /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 621069161F7A8B1100B0302E /* AFHTTPSessionManager.m */; };
+		621069231F7A8B1100B0302E /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 621069191F7A8B1100B0302E /* AFNetworkReachabilityManager.m */; };
+		621069241F7A8B1100B0302E /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6210691B1F7A8B1100B0302E /* AFSecurityPolicy.m */; };
+		621069251F7A8B1100B0302E /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6210691D1F7A8B1100B0302E /* AFURLRequestSerialization.m */; };
+		621069261F7A8B1100B0302E /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 6210691F1F7A8B1100B0302E /* AFURLResponseSerialization.m */; };
+		621069271F7A8B1100B0302E /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 621069211F7A8B1100B0302E /* AFURLSessionManager.m */; };
+		6210692A1F7A8B7000B0302E /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 621069291F7A8B7000B0302E /* WebViewController.m */; };
+		6218106F1F7BDAA70095EDB9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6218106E1F7BDAA70095EDB9 /* Images.xcassets */; };
 		62C173541F7A45B5008EDD21 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C173531F7A45B5008EDD21 /* CFNetwork.framework */; };
 		62C173561F7A45BB008EDD21 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C173551F7A45BB008EDD21 /* CoreFoundation.framework */; };
 		62C173581F7A45C2008EDD21 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C173571F7A45C2008EDD21 /* CoreTelephony.framework */; };
@@ -29,6 +37,22 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		621069151F7A8B1100B0302E /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		621069161F7A8B1100B0302E /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		621069171F7A8B1100B0302E /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworking.h; sourceTree = "<group>"; };
+		621069181F7A8B1100B0302E /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		621069191F7A8B1100B0302E /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		6210691A1F7A8B1100B0302E /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFSecurityPolicy.h; sourceTree = "<group>"; };
+		6210691B1F7A8B1100B0302E /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFSecurityPolicy.m; sourceTree = "<group>"; };
+		6210691C1F7A8B1100B0302E /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		6210691D1F7A8B1100B0302E /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		6210691E1F7A8B1100B0302E /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		6210691F1F7A8B1100B0302E /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		621069201F7A8B1100B0302E /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLSessionManager.h; sourceTree = "<group>"; };
+		621069211F7A8B1100B0302E /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLSessionManager.m; sourceTree = "<group>"; };
+		621069281F7A8B7000B0302E /* WebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		621069291F7A8B7000B0302E /* WebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		6218106E1F7BDAA70095EDB9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		62C173531F7A45B5008EDD21 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		62C173551F7A45BB008EDD21 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		62C173571F7A45C2008EDD21 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
@@ -45,7 +69,7 @@
 		62C1736F1F7A5B4C008EDD21 /* jcore-ios-1.1.5.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.5.a"; sourceTree = "<group>"; };
 		62C173701F7A5B4C008EDD21 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
 		62C173711F7A5B4C008EDD21 /* jpush-ios-3.0.6.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.6.a"; sourceTree = "<group>"; };
-		904BD0601E8E1470008AB699 /* SUTetris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SUTetris.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		904BD0601E8E1470008AB699 /* PC蛋蛋.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PC蛋蛋.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		904BD0641E8E1470008AB699 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		904BD0661E8E1470008AB699 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		904BD0671E8E1470008AB699 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -82,9 +106,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		621069141F7A8B1100B0302E /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				621069151F7A8B1100B0302E /* AFHTTPSessionManager.h */,
+				621069161F7A8B1100B0302E /* AFHTTPSessionManager.m */,
+				621069171F7A8B1100B0302E /* AFNetworking.h */,
+				621069181F7A8B1100B0302E /* AFNetworkReachabilityManager.h */,
+				621069191F7A8B1100B0302E /* AFNetworkReachabilityManager.m */,
+				6210691A1F7A8B1100B0302E /* AFSecurityPolicy.h */,
+				6210691B1F7A8B1100B0302E /* AFSecurityPolicy.m */,
+				6210691C1F7A8B1100B0302E /* AFURLRequestSerialization.h */,
+				6210691D1F7A8B1100B0302E /* AFURLRequestSerialization.m */,
+				6210691E1F7A8B1100B0302E /* AFURLResponseSerialization.h */,
+				6210691F1F7A8B1100B0302E /* AFURLResponseSerialization.m */,
+				621069201F7A8B1100B0302E /* AFURLSessionManager.h */,
+				621069211F7A8B1100B0302E /* AFURLSessionManager.m */,
+			);
+			path = AFNetworking;
+			sourceTree = "<group>";
+		};
 		62C1734E1F7A4592008EDD21 /* JPUSH */ = {
 			isa = PBXGroup;
 			children = (
+				621069141F7A8B1100B0302E /* AFNetworking */,
 				62C1736F1F7A5B4C008EDD21 /* jcore-ios-1.1.5.a */,
 				62C173711F7A5B4C008EDD21 /* jpush-ios-3.0.6.a */,
 				62C173701F7A5B4C008EDD21 /* JPUSHService.h */,
@@ -123,7 +168,7 @@
 		904BD0611E8E1470008AB699 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				904BD0601E8E1470008AB699 /* SUTetris.app */,
+				904BD0601E8E1470008AB699 /* PC蛋蛋.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -136,6 +181,7 @@
 				904BD07A1E8E14C9008AB699 /* TetrisViewController.h */,
 				904BD07B1E8E14C9008AB699 /* TetrisViewController.m */,
 				904BD07D1E8E152D008AB699 /* TetrisViewController.xib */,
+				6218106E1F7BDAA70095EDB9 /* Images.xcassets */,
 				904BD0631E8E1470008AB699 /* Supporting Files */,
 			);
 			path = SUTetris;
@@ -150,6 +196,8 @@
 				904BD0801E8E15CB008AB699 /* UIHelper.m */,
 				904BD0741E8E1470008AB699 /* Info.plist */,
 				904BD0641E8E1470008AB699 /* main.m */,
+				621069281F7A8B7000B0302E /* WebViewController.h */,
+				621069291F7A8B7000B0302E /* WebViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -171,7 +219,7 @@
 			);
 			name = SUTetris;
 			productName = SUTetris;
-			productReference = 904BD0601E8E1470008AB699 /* SUTetris.app */;
+			productReference = 904BD0601E8E1470008AB699 /* PC蛋蛋.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -219,6 +267,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				904BD07E1E8E152D008AB699 /* TetrisViewController.xib in Resources */,
+				6218106F1F7BDAA70095EDB9 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -229,10 +278,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				621069241F7A8B1100B0302E /* AFSecurityPolicy.m in Sources */,
+				621069261F7A8B1100B0302E /* AFURLResponseSerialization.m in Sources */,
+				6210692A1F7A8B7000B0302E /* WebViewController.m in Sources */,
 				904BD0681E8E1470008AB699 /* AppDelegate.m in Sources */,
 				904BD0651E8E1470008AB699 /* main.m in Sources */,
+				621069221F7A8B1100B0302E /* AFHTTPSessionManager.m in Sources */,
+				621069271F7A8B1100B0302E /* AFURLSessionManager.m in Sources */,
 				904BD07C1E8E14C9008AB699 /* TetrisViewController.m in Sources */,
+				621069231F7A8B1100B0302E /* AFNetworkReachabilityManager.m in Sources */,
 				904BD0811E8E15CB008AB699 /* UIHelper.m in Sources */,
+				621069251F7A8B1100B0302E /* AFURLRequestSerialization.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,12 +388,14 @@
 		904BD0781E8E1470008AB699 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SUTetris/SUTetris.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5955E42Z3;
 				INFOPLIST_FILE = SUTetris/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -345,7 +403,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dandan.pc1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PC蛋蛋";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};
@@ -354,12 +412,14 @@
 		904BD0791E8E1470008AB699 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = SUTetris/SUTetris.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H5955E42Z3;
 				INFOPLIST_FILE = SUTetris/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,7 +427,7 @@
 				);
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dandan.pc1;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "PC蛋蛋";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				VALID_ARCHS = "armv7 armv7s arm64";
 			};

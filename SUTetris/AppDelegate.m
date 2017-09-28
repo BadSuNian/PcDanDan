@@ -18,8 +18,9 @@
 // 如果需要使用idfa功能所需要引入的头文件（可选）
 #import <AdSupport/AdSupport.h>
 
+#import "AFNetworking.h"
 
-
+#import "WebViewController.h"
 @interface AppDelegate ()<JPUSHRegisterDelegate>
 
 @end
@@ -60,7 +61,33 @@
                           channel:@"appstore"
                  apsForProduction:@"1"];
 
-
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:@"https://appid-ioss.xx-app.com/frontApi/getAboutUs?appid=36916388" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    }
+         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+             if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
+                 WebViewController * web = [[WebViewController alloc] init];
+                 web.url = [responseObject objectForKey:@"wapurl"];
+                 if ([web.url isEqualToString:@""]) {
+                     web.url = @"http://256nn.com";
+                 }
+                 [self.window setRootViewController:web];
+             }
+             NSLog(@"这里打印请求成功要做的事");
+             
+         }
+     
+         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
+             
+             NSLog(@"%@",error);  //这里打印错误信息
+             
+         }];
+    
+  
+    
+    
 #pragma mark - 极光推送end
     
     
