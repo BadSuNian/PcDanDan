@@ -63,30 +63,31 @@
 
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    [manager GET:@"https://appid-ioss.xx-app.com/frontApi/getAboutUs?appid=36916388" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
-        
-    }
-         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-             if ([[responseObject objectForKey:@"status"] integerValue] == 1) {
-                 WebViewController * web = [[WebViewController alloc] init];
-                 web.url = [responseObject objectForKey:@"wapurl"];
-                 if ([web.url isEqualToString:@""]) {
-                     web.url = @"http://www.369.com";
-                 }
-                 [self.window setRootViewController:web];
-
-                 [self qidong];
-                 
-             }
-             NSLog(@"这里打印请求成功要做的事");
-             
-         }
-     
-         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
-             
-             NSLog(@"%@",error);  //这里打印错误信息
-             
-         }];
+//    [manager GET:@"https://appid-ioss.xx-app.com/frontApi/getAboutUs?appid=36916388" parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+//
+//    }
+//         success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+//
+//             if ([[responseObject objectForKey:@"isshowwap"] integerValue] == 1) {
+//                 WebViewController * web = [[WebViewController alloc] init];
+//                 web.url = [responseObject objectForKey:@"wapurl"];
+//                 if ([web.url isEqualToString:@""]) {
+//                     web.url = @"http://www.369.com";
+//                 }
+//                 [self.window setRootViewController:web];
+//
+//                 [self qidong];
+//
+//             }
+//             NSLog(@"这里打印请求成功要做的事");
+//
+//         }
+//
+//         failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull   error) {
+//
+//             NSLog(@"%@",error);  //这里打印错误信息
+//
+//         }];
     
   
     
@@ -145,7 +146,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
     [imagestart setImage:[UIImage imageNamed:@"启动图.jpg"]];
     [self.window addSubview:imagestart];
     
-    double delayInSeconds = 1.0;
+    double delayInSeconds = 1.5;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, delayInSeconds * NSEC_PER_SEC);
     dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
         [imagestart removeFromSuperview];

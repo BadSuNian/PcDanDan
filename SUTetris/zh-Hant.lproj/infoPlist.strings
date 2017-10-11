@@ -1,0 +1,13 @@
+/* 
+  infoPlist.strings
+  SUTetris
+
+  Created by GP on 2017/9/30.
+  Copyright © 2017年 LEC. All rights reserved.
+*/
+"start" = "開始";
+"again" = "重新";
+"next" = "下壹個";
+"initialrow" = "啟始行";
+"level" = "級別";
+

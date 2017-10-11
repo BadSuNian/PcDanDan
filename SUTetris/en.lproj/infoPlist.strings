@@ -1,0 +1,12 @@
+/* 
+  infoPlist.strings
+  SUTetris
+
+  Created by GP on 2017/9/30.
+  Copyright © 2017年 LEC. All rights reserved.
+*/
+"start" = "start";
+"again" = "again";
+"next" = "next";
+"initialrow" = "Initial Row";
+"level" = "level";

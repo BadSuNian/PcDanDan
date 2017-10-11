@@ -24,7 +24,7 @@
 
 #import "TetrisViewController.h"
 #import "UIHelper.h"
-
+#import "UIViewExt.h"
 #if TARGET_IPHONE_SIMULATOR
 #define SIMULATOR 1
 #elif TARGET_OS_IPHONE
@@ -35,8 +35,12 @@
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 #define kSquareWH 15  // (kScreenWidth / 20)
 
-#define kRowCount 20
-#define kColumnCount 11
+#define SCREEN_WIDTH    ([[UIScreen mainScreen] bounds].size.width)
+#define SCREEN_HEIGHT   ([[UIScreen mainScreen] bounds].size.height)
+
+#define kRowCount  (([UIScreen mainScreen].bounds.size.width == 414)?30: 20)
+#define kColumnCount (([UIScreen mainScreen].bounds.size.width == 414)?15: 11)
+
 
 @interface TetrisViewController ()
 {
@@ -56,6 +60,7 @@
 @property (strong, nonatomic) SquareGroup *group;
 
 @property (weak, nonatomic) IBOutlet UILabel *scoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *jibielabel;
 @property (weak, nonatomic) IBOutlet UITextField *scoreField;
 @property (weak, nonatomic) IBOutlet UILabel *lineCountLabel;
 @property (weak, nonatomic) IBOutlet UITextField *lineCountField;
@@ -63,6 +68,17 @@
 @property (weak, nonatomic) IBOutlet UIView *tipBoardView;
 @property (weak, nonatomic) IBOutlet UIButton *pauseButton;
 @property (weak, nonatomic) IBOutlet UIButton *replayButton;
+@property (weak, nonatomic) IBOutlet UILabel *nextLabel;
+
+@property (weak, nonatomic) IBOutlet UIButton *shangbutton;
+
+@property (weak, nonatomic) IBOutlet UIButton *zuobutton;
+
+@property (weak, nonatomic) IBOutlet UIButton *youbutton;
+@property (weak, nonatomic) IBOutlet UIButton *xiabutton;
+
+@property (weak, nonatomic) IBOutlet UIButton *bianxingbutton;
+
 
 @property (strong, nonatomic) NSTimer *dropDownTimer;       // 下落计时 1
 @property (strong, nonatomic) NSTimer *keepMoveTimer;       // 按住按钮持续移动 0
@@ -84,9 +100,60 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    
     [self setupUI];
     [self initConfigs];
     [self configNotifications];
+    
+    int right  = SCREEN_WIDTH - 15;
+    int width = 75;
+    _scoreField.right = right;
+    _scoreField.width = width;
+
+    self.scoreLabel.right = right;
+    self.scoreLabel.width = width;
+
+    self.jibielabel.right = right;
+    self.jibielabel.width = width;
+
+    self.lineCountLabel.right = right;
+    self.lineCountLabel.width = width;
+    
+    self.lineCountField.right = right;
+    self.lineCountField.width = width;
+    
+    self.levelField.right = right;
+    self.levelField.width = width;
+    
+    self.tipBoardView.right = right;
+    self.tipBoardView.width = width;
+
+    self.replayButton.right = right;
+
+    self.pauseButton.right = self.replayButton.left - 15;
+
+
+    self.nextLabel.right = right;
+    self.nextLabel.width = width;
+
+    self.bianxingbutton.x = SCREEN_WIDTH - 90 - 15;
+    self.bianxingbutton.y = SCREEN_HEIGHT - 90 - 30;
+
+
+    self.zuobutton.left = 30;
+    self.zuobutton.y = self.bianxingbutton.y;
+
+    self.youbutton.left = 30 + 54 * 2;
+    self.youbutton.y = self.bianxingbutton.y;
+
+    self.shangbutton.y = self.youbutton.y - 54;
+    self.shangbutton.left = self.zuobutton.right;
+
+    self.xiabutton.left = self.shangbutton.left;
+    self.xiabutton.y = self.youbutton.y + 54;
+    
+    
 }
 
 - (void)initConfigs {
@@ -212,15 +279,15 @@
             
             [self dispatchAfter:0.05 operation:^{
                 square.selected = NO;
-            [self dispatchAfter:0.1 operation:^{
-                square.selected = YES;
-            [self dispatchAfter:0.1 operation:^{
-                square.selected = NO;
-            [self dispatchAfter:0.1 operation:^{
-                square.selected = YES;
-            [self dispatchAfter:0.1 operation:^{
-                square.selected = NO;
-            }]; }]; }]; }]; }];
+                [self dispatchAfter:0.1 operation:^{
+                    square.selected = YES;
+                    [self dispatchAfter:0.1 operation:^{
+                        square.selected = NO;
+                        [self dispatchAfter:0.1 operation:^{
+                            square.selected = YES;
+                            [self dispatchAfter:0.1 operation:^{
+                                square.selected = NO;
+                            }]; }]; }]; }]; }];
             
         }
     }
@@ -800,7 +867,7 @@
     if (!_squareRoomView) {
         
         _squareRoomView = [[UIView alloc] init];
-        _squareRoomView.frame = CGRectMake(20, 100, kSquareWH * kColumnCount, kSquareWH * kRowCount);
+        _squareRoomView.frame = CGRectMake(40, 60, kSquareWH * kColumnCount, kSquareWH * kRowCount);
         _squareRoomView.backgroundColor = COLOR(191, 207, 233);
         //        _squareRoomView.clipsToBounds = YES;
         _squareRoomView.userInteractionEnabled = NO;
@@ -1066,44 +1133,44 @@
                    @[
                        @[@1, @4, @5, @8],   // Z
                        @[@0, @1, @5, @6],
-                    ],
+                       ],
                    
                    @[
                        @[@1, @5, @6, @10],  // 反Z
                        @[@1, @2, @4, @5],
-                    ],
+                       ],
                    
                    @[
                        @[@1, @2, @6, @10],
                        @[@6, @8, @9, @10],
                        @[@0, @4, @8, @9],   // L
                        @[@0, @1, @2, @4],
-                    ],
+                       ],
                    
                    @[
                        @[@0, @1, @4, @8],
                        @[@0, @1, @2, @6],
                        @[@2, @6, @9, @10],  // 反L
                        @[@4, @8, @9, @10],
-                    ],
+                       ],
                    
                    @[
                        @[@1, @4, @5, @9],
                        @[@1, @4, @5, @6],   // 凸
                        @[@1, @5, @6, @9],
                        @[@4, @5, @6, @9],
-                    ],
+                       ],
                    
                    @[
                        @[@0, @1, @4, @5],    // 田
-                    ],
+                       ],
                    
                    @[
                        @[@4, @5, @6, @7],   // 一
                        @[@1, @5, @9, @13],
-                    ],
+                       ],
                    
-                  ];
+                   ];
     }
     return _types;
 }
