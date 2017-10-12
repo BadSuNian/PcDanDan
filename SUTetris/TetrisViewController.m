@@ -153,7 +153,12 @@
     self.xiabutton.left = self.shangbutton.left;
     self.xiabutton.y = self.youbutton.y + 54;
     
+    self.jibielabel.text =   NSLocalizedStringFromTable(@"level",@"infoPlist", nil);
+    self.nextLabel.text =   NSLocalizedStringFromTable(@"next",@"infoPlist", nil);
+    self.lineCountLabel.text =   NSLocalizedStringFromTable(@"initialrow",@"infoPlist", nil);
     
+    [self.pauseButton setTitle:NSLocalizedStringFromTable(@"start",@"infoPlist", nil) forState:UIControlStateNormal];
+    [self.replayButton setTitle:NSLocalizedStringFromTable(@"again",@"infoPlist", nil) forState:UIControlStateNormal];
 }
 
 - (void)initConfigs {
@@ -829,12 +834,12 @@
 - (void)setIsSettingMode:(BOOL)isSettingMode {
     _isSettingMode = isSettingMode;
     if (isSettingMode) {
-        self.scoreLabel.text = @"最高分";
+        self.scoreLabel.text = NSLocalizedStringFromTable(@"heightscore",@"infoPlist" ,nil) ;
         self.scoreField.text = @(_bestScore).stringValue;
         self.lineCountLabel.text = @"起始行";
         self.lineCountField.text = @(self.startupLines).stringValue;
     }else {
-        self.scoreLabel.text = @"当前得分";
+        self.scoreLabel.text = NSLocalizedStringFromTable(@"score",@"infoPlist" , nil) ;
         self.scoreField.text = @(self.score).stringValue;
         self.lineCountLabel.text = @"消除行";
         self.lineCountField.text = @(self.clearedLines).stringValue;

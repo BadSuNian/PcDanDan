@@ -36,9 +36,9 @@
 		62C1736A1F7A460A008EDD21 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C173691F7A460A008EDD21 /* libresolv.tbd */; };
 		62C173721F7A5B4C008EDD21 /* jcore-ios-1.1.5.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C1736F1F7A5B4C008EDD21 /* jcore-ios-1.1.5.a */; };
 		62C173731F7A5B4C008EDD21 /* jpush-ios-3.0.6.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 62C173711F7A5B4C008EDD21 /* jpush-ios-3.0.6.a */; };
-		62E2E0931F7F92610097B628 /* infoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62E2E0951F7F92610097B628 /* infoPlist.strings */; };
 		62E83CB81F8E48920034F3A6 /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 62E83CB71F8E462F0034F3A6 /* UIViewExt.m */; };
 		62E83CB91F8E48A60034F3A6 /* TetrisViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 904BD07B1E8E14C9008AB699 /* TetrisViewController.m */; };
+		62E83CBB1F8F1C2F0034F3A6 /* infoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 62E2E0951F7F92610097B628 /* infoPlist.strings */; };
 		904BD0651E8E1470008AB699 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 904BD0641E8E1470008AB699 /* main.m */; };
 		904BD0681E8E1470008AB699 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 904BD0671E8E1470008AB699 /* AppDelegate.m */; };
 		904BD07E1E8E152D008AB699 /* TetrisViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 904BD07D1E8E152D008AB699 /* TetrisViewController.xib */; };
@@ -292,7 +292,6 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
-				Base,
 				"zh-Hans",
 				"zh-Hant",
 			);
@@ -312,7 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				621811051F7CA8690095EDB9 /* GuideImage.bundle in Resources */,
-				62E2E0931F7F92610097B628 /* infoPlist.strings in Resources */,
+				62E83CBB1F8F1C2F0034F3A6 /* infoPlist.strings in Resources */,
 				621811061F7CA91F0095EDB9 /* 介绍.png in Resources */,
 				6218110A1F7CB68B0095EDB9 /* 启动图.jpg in Resources */,
 				621811081F7CA9240095EDB9 /* 介绍页2.png in Resources */,

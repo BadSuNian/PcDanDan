@@ -10,3 +10,5 @@
 "next" = "next";
 "initialrow" = "Initial Row";
 "level" = "level";
+"score" = "score";
+"heightscore" = "highest score";

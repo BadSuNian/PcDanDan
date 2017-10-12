@@ -8,6 +8,7 @@
 "start" = "开始";
 "again" = "重新";
 "next" = "下一个";
-"initialrow" = "啟始行";
+"initialrow" = "启始行";
 "level" = "级別";
-
+"score" = "分数";
+"heightscore" = "最高分";
