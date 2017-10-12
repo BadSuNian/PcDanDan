@@ -105,7 +105,10 @@
     [self setupUI];
     [self initConfigs];
     [self configNotifications];
-    
+    self.jibielabel.text =   NSLocalizedStringFromTable(@"level",@"infoPlist", nil);
+    self.nextLabel.text =   NSLocalizedStringFromTable(@"next",@"infoPlist", nil);
+    self.lineCountLabel.text =   NSLocalizedStringFromTable(@"initialrow",@"infoPlist", nil);
+
     int right  = SCREEN_WIDTH - 15;
     int width = 75;
     _scoreField.right = right;
@@ -129,6 +132,12 @@
     self.tipBoardView.right = right;
     self.tipBoardView.width = width;
 
+    [self.pauseButton setTitle:NSLocalizedStringFromTable(@"start",@"infoPlist", nil) forState:UIControlStateNormal];
+    self.pauseButton.width =50;
+    [self.replayButton setTitle:NSLocalizedStringFromTable(@"again",@"infoPlist", nil) forState:UIControlStateNormal];
+    self.replayButton
+    .width =50;
+    
     self.replayButton.right = right;
 
     self.pauseButton.right = self.replayButton.left - 15;
@@ -153,12 +162,8 @@
     self.xiabutton.left = self.shangbutton.left;
     self.xiabutton.y = self.youbutton.y + 54;
     
-    self.jibielabel.text =   NSLocalizedStringFromTable(@"level",@"infoPlist", nil);
-    self.nextLabel.text =   NSLocalizedStringFromTable(@"next",@"infoPlist", nil);
-    self.lineCountLabel.text =   NSLocalizedStringFromTable(@"initialrow",@"infoPlist", nil);
     
-    [self.pauseButton setTitle:NSLocalizedStringFromTable(@"start",@"infoPlist", nil) forState:UIControlStateNormal];
-    [self.replayButton setTitle:NSLocalizedStringFromTable(@"again",@"infoPlist", nil) forState:UIControlStateNormal];
+ 
 }
 
 - (void)initConfigs {
@@ -832,14 +837,24 @@
 #pragma mark - setters
 
 - (void)setIsSettingMode:(BOOL)isSettingMode {
+    
+    int right  = SCREEN_WIDTH - 15;
+    int width = 75;
+
     _isSettingMode = isSettingMode;
     if (isSettingMode) {
         self.scoreLabel.text = NSLocalizedStringFromTable(@"heightscore",@"infoPlist" ,nil) ;
+        self.scoreLabel.right = right;
+        self.scoreLabel.width = width;
+
         self.scoreField.text = @(_bestScore).stringValue;
         self.lineCountLabel.text = @"起始行";
         self.lineCountField.text = @(self.startupLines).stringValue;
     }else {
         self.scoreLabel.text = NSLocalizedStringFromTable(@"score",@"infoPlist" , nil) ;
+        self.scoreLabel.right = right;
+        self.scoreLabel.width = width;
+
         self.scoreField.text = @(self.score).stringValue;
         self.lineCountLabel.text = @"消除行";
         self.lineCountField.text = @(self.clearedLines).stringValue;
